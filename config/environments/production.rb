@@ -57,6 +57,11 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "instagram-authority-analyser_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
+  # Update this when final hostname for prod is known
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
