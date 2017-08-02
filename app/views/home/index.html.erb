@@ -1,10 +1,13 @@
 <h1>Home#index</h1>
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+    <%= link_to('Connect instagram', user_instagram_omniauth_authorize_path) %>
+  </li>
+  <li>
+    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
   </li>
 <% else %>
   <li>
-  <%= link_to('Login', new_user_session_path)  %>
+    <%= link_to('Login', new_user_session_path)  %>
   </li>
 <% end %>
