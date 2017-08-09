@@ -5,6 +5,9 @@ on instagram.
 
 The definition of "authority" is not currently defined.
 
+This project has stalled. Instagram Sandbox permissions don't allow me to test 
+any of the ideas I want to play with
+
 # Getting started
 
 * Install ruby 2.4p0 or higher
