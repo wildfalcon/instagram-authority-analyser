@@ -5,4 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   has_one :identity
+
+  def instagram_client
+    raise Exceptions::InstagramError.new("No identity") if identity.nil?
+    @instagram_client ||= Instagram.client( access_token: identity.access_token)
+  end
+
 end
